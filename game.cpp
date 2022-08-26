@@ -1,5 +1,7 @@
 #include <iostream>
 #include <conio.h>
+#include <bits/stdc++.h>
+#include<time.h>
 using namespace std;
 
 int main()
@@ -12,6 +14,10 @@ int main()
     int guess;
     bool guessed = false;
 
+    // Generating the number 
+    srand(time(0));
+    int number = 1 + (rand() % 100);
+    cout << number;
     // Mainloop
     while (guessed == false)
     {
