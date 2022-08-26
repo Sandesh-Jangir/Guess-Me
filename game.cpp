@@ -17,12 +17,25 @@ int main()
     // Generating the number 
     srand(time(0));
     int number = 1 + (rand() % 100);
-    cout << number;
+
+    // cout << number; <- for debugging purposes only
+    
     // Mainloop
+    int score_n = 0;
     while (guessed == false)
     {
+        score_n++;
         cout << "Guess: ";
         cin >> guess;
+        if (number == guess){
+            cout << "Congratulations !! Great Guess" << endl;
+            cout <<"Score : "<< 100-score_n;
+            guessed = true;
+        }else if (number < guess){
+            cout << "Lower!"<<endl;
+        }else{
+            cout << "Higher!"<<endl;
+        }
     }
     
     getch();
